@@ -1,0 +1,1 @@
+# Fire-Detection-with-GenAI-AzureDeployment-Using-Terraform
