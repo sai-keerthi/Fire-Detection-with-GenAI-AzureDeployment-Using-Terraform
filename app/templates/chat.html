@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Response</title>
+</head>
+<body>
+    <h1>Chatbot Response</h1>
+
+    <!-- Form to send user input to the chatbot -->
+    <form action="/chat" method="POST">
+        <label for="user_input">Your question:</label>
+        <input type="text" name="user_input" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Display the chatbot's response -->
+    {% if response %}
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+
+    <a href="/">Go back</a>
+</body>
+</html>

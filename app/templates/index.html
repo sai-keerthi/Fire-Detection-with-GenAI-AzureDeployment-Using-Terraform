@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Detection</title>
+</head>
+<body>
+    <h1>Fire Detection System</h1>
+
+    <!-- Form to upload an image and send it to the /detect route -->
+    <form action="/detect" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload an image:</label>
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display result if available -->
+    {% if result %}
+        <h2>Detection Result: {{ result }}</h2>
+        <img src="{{ img_path }}" alt="Uploaded Image" style="max-width:300px;">
+    {% endif %}
+</body>
+</html>
